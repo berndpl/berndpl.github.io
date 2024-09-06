@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>▲● Bernd Plontsch - Room Sublet, Offer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon-16.png">
+    <style>
+        body {
+            font-family: 'Avenir', Helvetica, Arial, 'Lucida Grande', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        .card {
+            display: flex;
+            flex-direction: row; /* Change to row to place items side by side */
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px; /* Adjust margin as needed */
+            border-radius: 8px;
+        }
+        .card img, .image-grid img {
+            flex-grow: 1;
+            object-fit: cover;
+            height: 200px;
+            cursor: pointer; /* Hand cursor */
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.0em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #006400;
+            font-weight: bold;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            width: calc(100vw - 20px);
+            margin-left: calc(-50vw + 50% + 10px);
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .image-grid img {
+            border-radius: 8px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 8px;
+        }
+        .contact-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #cdffd0; /* Pastel color */
+            color: #00482d;
+            padding: 2px 8px;
+            font-weight: bold; /* Bolder text */
+            text-transform: uppercase; /* All caps */
+        }
+        mark {
+            background-color: #cdffd0; /* Pastel color */
+            border-radius: 4px; /* Slightly rounded corners */
+        }
+        .update-note {
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <p class="update-note">Updated: Sep 5, 2024 • <span class="tag">STILL AVAILABLE</span></p>
+        <h1>Subletting our room</span></h1>
+    </div>
+
+    <div class="card">
+        <img src="https://plontsch.de/room/images/room_1.jpeg" alt="Room image" onclick="openOverlay(this.src)">
+        <img src="https://plontsch.de/room/images/map.jpeg" alt="Map showing the approximate address" onclick="window.open('https://www.google.com/maps/place/Ahlbecker+Str.,+10437+Berlin-Bezirk+Pankow/@52.5445363,13.4223894,17z/data=!3m1!4b1!4m6!3m5!1s0x47a84dfe90b17bab:0x1f5f53c73ab2baf7!8m2!3d52.5445331!4d13.4249643!16s%2Fg%2F1tp2zdsg?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+    </div>
+
+    <p>Hi friends.</p>
+    
+    <p>We are subletting the big room in our apartment in Prenzlauer Berg, 2 min from S-Bahn Prenzlauer Allee. The contract is <mark>limited to 2 years for 900€ per month, starting Dec 1st</mark> or earlier if needed.</p>
+    <p>As we are spending most of our time in Japan you'll have the apartment mostly for yourself besides a few times when we are visiting. The apartment comes fully equipped and ready to live in. You can pick any of the things you need and we'd just store the rest.</p>
+    <p>As this will be a shared space we are looking for somebody we can trust. If you know somebody who might be interested in this please forward this message. Thank you.</p>
+
+    <h2>Your Room</h2>
+    <ul>
+        <li>About 22 qm</li>
+        <li>Sofa/Bed</li>
+        <li>Desk</li>
+        <li>Shelf</li>
+        <li>With balcony</li>
+        <li>High ceiling, might consider a Hochbett in case you need more space.</li>
+        <li>Nice light</li>
+    </ul>
+
+    <h2>Kitchen</h2>
+    <ul>
+        <li>Fridge</li>
+        <li>Dish washer</li>
+        <li>Kitchen stuff as needed</li>
+    </ul>
+
+    <h2>Bathroom</h2>
+    <ul>
+        <li>Washing Machine/Dryer</li>
+        <li>Bathtub</li>
+    </ul>
+
+    <h2>Internet, heat, water, electricity</h2>
+    <ul>
+        <li>All included</li>
+        <li>Vodafone CableMax 1000</li>
+        <li>Electricity and Water and Gas is all included based on the previous average usage. In case usage increases you'd need to pay the difference extra. Just in case.</li>
+    </ul>
+
+    <h2>More details</h2>
+    <ul>
+        <li>Sadly no dogs allowed :-/</li>
+        <li>Only one person, no WG possible</li>
+        <li>A Innenhof for your bike</li>
+        <li>The whole apartment is 68,67 qm. We'll keep one smaller room for storage and to live when we're visiting. The rest is for you to use and make yours</li>
+    </ul>
+
+    <div class="image-grid">
+        <img src="images/room_2.jpeg" alt="Room image 2" onclick="openOverlay(this.src)">
+        <img src="images/room_3.jpeg" alt="Room image 3" onclick="openOverlay(this.src)">
+        <img src="images/room_4.jpeg" alt="Room image 4" onclick="openOverlay(this.src)">
+        <img src="images/room_5.jpeg" alt="Room image 5" onclick="openOverlay(this.src)">
+        <img src="images/room_6.jpeg" alt="Room image 6" onclick="openOverlay(this.src)">
+        <img src="images/room_7.jpeg" alt="Room image 7" onclick="openOverlay(this.src)">
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeOverlay()">
+        <img id="overlayImage" src="" alt="Full-screen image">
+    </div>
+
+    <p class="contact-box">Interested? Please reach out, directly…<br>
+        Bernd — 💬 <a href="tel:+4916092879311">0160 92879311</a> ✉️ <a href="mailto:bernd.plontsch@gmail.com">bernd.plontsch@gmail.com</a></p>
+    <script>
+        function openOverlay(src) {
+            document.getElementById('overlayImage').src = src;
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

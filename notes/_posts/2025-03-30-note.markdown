@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "A new beginning"
+date:   2025-03-30 17:59:38 -0700
+categories: note
+---
+AI will be able to do so everything we do. There’s one thing it will never do. Feeling our feelings
+
+There will always be ai and there will always be the human. There will always need to be a translation layer between what we feel and what the ai does.

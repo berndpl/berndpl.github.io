@@ -39,7 +39,7 @@
   --bg-secondary: #313244;
   --bg-tertiary: #45475a;
   --text-primary: #cdd6f4;
-  --text-secondary: #a6adc8;
+  --text-secondary: #7d8297;
   --text-tertiary: #6c7086;
   --accent-primary: #b4befe;
   --accent-secondary: #f5e0dc;
@@ -799,6 +799,11 @@ th, td {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .feature-image,
+  .stacked {
+    justify-content: center !important;
+    text-align: center;
+  }
   .container {
     padding: 0 16px;
   }
@@ -823,8 +828,8 @@ th, td {
   }
   
   .cta-button {
-    padding: 6px 12px;
-    font-size: 13px;
+    padding: 10px 20px;
+    font-size: 15px;
   }
   
   .app-description {
@@ -865,6 +870,11 @@ th, td {
 }
 
 @media (max-width: 480px) {
+  .feature-image,
+  .stacked {
+    justify-content: center !important;
+    text-align: center;
+  }
   header {
     padding: 30px 0 25px;
   }

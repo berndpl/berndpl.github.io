@@ -83,24 +83,158 @@ header {
   display: flex;
   align-items: center;
   gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.logo-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+}
 }
 
 .logo-icon {
   width: 56px;
   height: 56px;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
+.main-icon {
+  position: relative;
+  z-index: 3;
+}
+
+.stack-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(0) scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.logo:hover .stack-icon:nth-of-type(2) {
+}
+}
+
+.logo:hover .stack-icon:nth-of-type(3) {
+}
+.logo-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+}
+.logo-icons:hover {
+  width: auto;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s, visibility 0.3s;
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+.main-icon {
+  position: relative;
+  z-index: 3;
+}
+}
+.stack-icon {
+  position: relative;
+  left: auto;
+  top: auto;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: none;
+}
+}
+.logo-icons:hover .main-icon,
+
+/* Initial stacked state for stack icons */
+.stack-icon {
+  transform: translateY(0) scale(1);
+}
+.stack-icon:nth-of-type(2) {
+  transform: translateY(0px) scale(1);
+}
+.stack-icon:nth-of-type(3) {
+  transform: translateY(0px) scale(1);
+}
+
+/* On hover, animate to row */
+.logo-icons:hover .main-icon {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  z-index: 3;
+}
+.logo-icons:hover .stack-icon:nth-of-type(2) {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(4px);
+  z-index: 2;
+}
+.logo-icons:hover .stack-icon:nth-of-type(3) {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(8px);
+  z-index: 1;
+}
+.logo-icons:not(:hover) .stack-icon {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0) scale(1);
+  visibility: hidden;
+  transition-delay: 0s, 0s, 0.3s;
+}
+}
 .logo-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  transition: opacity 0.3s ease;
+}
+.app-title-text {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.logo-icons:hover ~ .app-title-text {
+  opacity: 0;
+  pointer-events: none;
+}
+}
+.logo-icons:hover ~ .app-title-text {
+  opacity: 0;
+  pointer-events: none;
+}
 }
 
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .badge {

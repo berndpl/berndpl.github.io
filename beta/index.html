@@ -1,0 +1,59 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-custom-palettes>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beta files - Bernd Plontsch</title>
+  <meta name="description" content="Beta downloads from Bernd Plontsch.">
+  <meta name="robots" content="noindex">
+  <script src="/assets/js/family-theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/family-theme.css">
+  <link rel="stylesheet" href="/assets/css/family-typography.css">
+  <link rel="stylesheet" href="/assets/css/family-header.css">
+  <link rel="stylesheet" href="/assets/css/family-footer.css">
+  <link rel="stylesheet" href="/assets/css/family-actions.css">
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">About</a>
+        <a href="/beta/" aria-current="page">Beta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <h2>Beta files</h2>
+    <p>Experimental builds. They may be incomplete or unstable.</p>
+
+    {% assign beta_files = site.static_files | sort: "path" %}
+    {% assign has_beta_files = false %}
+    <ul aria-label="Beta downloads">
+      {% for file in beta_files %}
+        {% assign beta_prefix = file.path | slice: 0, 6 %}
+        {% if beta_prefix == "/beta/" %}
+          {% assign has_beta_files = true %}
+          {% assign display_path = file.path | remove_first: "/beta/" %}
+          <li><a href="{{ file.path | relative_url | escape }}">{{ display_path | escape }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+    {% unless has_beta_files %}
+      <p>No beta files are available right now.</p>
+    {% endunless %}
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bernd Plontsch</p>
+  </footer>
+</body>
+</html>

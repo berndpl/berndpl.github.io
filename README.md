@@ -6,6 +6,9 @@
 - `notes.plontsch.de`
 - the published Project Websites listed in the family roster
 
+The curated Project Website roster is currently empty. Steps and Louder remain available through
+their GitHub repositories and Pages URLs, but are not linked or published as family members.
+
 The root page and 404 use local copies of the Notes-owned family assets in `assets/`:
 
 - `family-header.css` owns content width, responsive insets, transparent header geometry, and shared structural metrics

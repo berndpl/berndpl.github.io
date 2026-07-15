@@ -1,0 +1,132 @@
+/*
+  Canonical primary action styling owned by Notes.
+  Labels and icons stay site-owned; button metrics and states stay identical.
+*/
+:root {
+  --family-action-height: 2rem;
+  --family-action-padding-y: .25rem;
+  --family-action-padding-x: .75rem;
+  --family-action-radius: 8px;
+  --family-action-gap: .4rem;
+}
+
+:where(
+  a[href]:not([aria-disabled="true"]),
+  button:not(:disabled):not([aria-disabled="true"]),
+  [role="button"]:not(button):not([aria-disabled="true"])
+) {
+  cursor: pointer;
+}
+
+.action-link,
+.lets-talk-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--family-action-gap);
+  min-height: var(--family-action-height);
+  padding: var(--family-action-padding-y) var(--family-action-padding-x);
+  border-radius: var(--family-action-radius);
+  text-decoration: none;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+.action-link:not(.secondary),
+.lets-talk-button {
+  color: var(--theme-button-text);
+  background-color: var(--theme-accent);
+  border: 1px solid var(--theme-accent);
+}
+
+.action-link:not(.secondary):hover,
+.lets-talk-button:hover {
+  color: var(--theme-button-text);
+  background-color: var(--theme-action-hover, var(--theme-hover));
+  border-color: var(--theme-action-hover, var(--theme-hover));
+  text-decoration: none;
+  filter: none;
+}
+
+.action-link:focus-visible,
+.lets-talk-button:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 3px;
+}
+
+.action-symbol {
+  display: block;
+  transform: scale(1);
+  transform-box: border-box;
+  transform-origin: 50% 50%;
+  transition: transform 560ms cubic-bezier(.16, 1.8, .32, 1);
+}
+
+@media (hover: hover) {
+  .action-link:not(.secondary):hover > .action-symbol,
+  .lets-talk-button:hover > .action-symbol {
+    transform: scale(1.45);
+  }
+}
+
+.action-link:not(.secondary):focus-visible > .action-symbol,
+.lets-talk-button:focus-visible > .action-symbol {
+  transform: scale(1.45);
+}
+
+.not-found {
+  min-height: min(70vh, 38rem);
+  max-width: 32rem;
+  padding: clamp(4rem, 12vw, 8rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.not-found-icon {
+  width: var(--family-hero-icon-size, 4rem);
+  height: var(--family-hero-icon-size, 4rem);
+  margin-bottom: 1rem;
+  display: block;
+  object-fit: contain;
+}
+
+.not-found-code {
+  margin: 0 0 .4rem;
+  color: var(--theme-overlay0);
+  font-size: .9rem;
+  font-weight: var(--family-weight-quiet, 300);
+  line-height: 1;
+}
+
+.not-found h1 {
+  margin: 0;
+  color: var(--theme-heading);
+  font-size: var(--family-page-title-size, 1.6rem);
+  font-weight: var(--family-weight-bold, 700);
+  line-height: 1.2;
+}
+
+.not-found-copy {
+  max-width: 30rem;
+  margin: .75rem 0 0;
+}
+
+.not-found-action {
+  margin: 1.25rem 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-link,
+  .lets-talk-button,
+  .action-symbol {
+    transition: none;
+  }
+
+  .action-link:not(.secondary):hover > .action-symbol,
+  .action-link:not(.secondary):focus-visible > .action-symbol,
+  .lets-talk-button:hover > .action-symbol,
+  .lets-talk-button:focus-visible > .action-symbol {
+    transform: none;
+  }
+}

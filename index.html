@@ -1,274 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-custom-palettes>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bernd Plontsch</title>
-	<meta name="description" content="Bernd Plontsch, Engineer and Designer">
-	<a rel="me" href="https://home.social/@berndplontsch"></a>
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<style>
-
-		:root {
-			--bg-primary: #e6e6e6;
-			--text-primary: #444444;
-			--text-secondary: #7c7c7c;
-			--font-family: 'JetBrains Mono', monospace;
-			--font-size-md: 14px; /* reduced base size for overall scale */
-		}
-		
-		[data-theme="dark"] {
-			/* Dark theme (Catppuccin Mocha) */
-			--bg-primary: #1e1e2e;
-			--text-primary: #cdd6f4;
-			--text-secondary: #7d8297;
-		}
-		body {
-			font-family: var(--font-family);
-			line-height: 1.6;
-			color: var(--text-primary);
-			background-color: var(--bg-primary);
-			font-size: var(--font-size-md);
-			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			transition: background-color 0.8s ease, color 0.8s ease;
-		}
-		.main {
-			width: 100%;
-			max-width: 480px;
-			margin-left: auto;
-			margin-right: auto;
-			display: flex;
-			flex-direction: column;
-            padding-top: 8em;
-			padding-bottom: 32px;
-		}
-
-		.header {
-			text-align: left;
-			cursor: pointer;
-		}
-
-		h1 {
-			color: var(--text-primary);
-			font-size: 1rem; /* larger than base but balanced after reducing base */
-			margin-bottom: 0.5em;
-			transition: color 0.8s ease;
-		}
-		p {
-			color: var(--text-secondary);
-			font-size: 1rem;
-			margin-bottom: 1em;
-			transition: color 0.8s ease;
-		}
-		a {
-			color: #3333cc;
-			text-decoration: none;
-			font-weight: 500;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
-		.footer {
-			margin-top: 3.5em;
-			text-align: left;
-		}
-		/* top navigation */
-		.topnav {
-			position: absolute;
-			top: 18px;
-			left: 24px;
-			right: 24px;
-			display: flex;
-			/* align-items: center;
-			pointer-events: auto;
-
-			width: 100%; */
-			max-width: 480px;
-			margin-left: auto;
-			margin-right: auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			
-			padding-bottom: 12px;
-		}
-		.topnav ul {
-			display: flex;
-			gap: 1.2rem;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-		.topnav a {
-			font-family: var(--font-family);
-			color: var(--text-primary);
-			text-decoration: none;
-			font-size: 1rem;
-			letter-spacing: 0.02em;
-			transition: color 0.8s ease, opacity 0.2s ease;
-		}
-		.topnav a:hover {
-			text-decoration: underline;
-			opacity: 0.9;
-		}
-		.topnav .active {
-			font-weight: 700;
-		}
-		@media (max-width: 600px) {
-			.topnav a { font-size: 1rem; }
-			.main { padding-top: 8em; padding-left: 24px; padding-right: 24px; }
-			body { padding: 0; }
-		}
-
-		ul {
-			list-style: none;
-			padding: 0;
-			display: flex;
-			gap: 0.8em;
-			justify-content: flex-start;
-		}
-
-		ul li a img {
-			width: 22px;
-			height: 22px;
-			opacity: 0.7;
-			transition: opacity 0.2s ease, filter 0.8s ease;
-			filter: invert(0);
-		}
-		ul li a img:hover {
-			opacity: 1;
-		}
-		[data-theme="dark"] ul li a img {
-			filter: invert(1);
-		}
-		
-		/* Name pronunciation tooltip */
-		.name-tooltip {
-			position: relative;
-			cursor: pointer;
-		}
-		
-		.name-tooltip::after {
-			content: "|'bɛnd|";
-			position: absolute;
-			bottom: 100%;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: var(--text-primary);
-			color: var(--bg-primary);
-			padding: 4px 8px;
-			border-radius: 4px;
-			font-size: 0.8rem;
-			white-space: nowrap;
-			opacity: 0;
-			visibility: hidden;
-			transition: opacity 0.3s ease, visibility 0.3s ease;
-			z-index: 1;
-			pointer-events: none;
-			margin-bottom: 5px;
-		}
-		
-		.name-tooltip:hover::after {
-			opacity: 1;
-			visibility: visible;
-		}
-	</style>
-</head>		 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Bernd Plontsch</title>
+  <meta name="title" content="About - Bernd Plontsch">
+  <meta name="description" content="Bernd Plontsch is a hands-on product designer with an engineering background.">
+  <link rel="canonical" href="https://plontsch.de/">
+  <meta property="og:title" content="About">
+  <meta property="og:description" content="A hands-on product designer with an engineering background, creating helpful and friendly experiences.">
+  <meta property="og:url" content="https://plontsch.de/">
+  <meta property="og:site_name" content="Bernd Plontsch">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://plontsch.de/apple-touch-icon.png">
+  <meta property="og:image:width" content="180">
+  <meta property="og:image:height" content="180">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://plontsch.de/apple-touch-icon.png">
+  <link rel="me" href="https://home.social/@berndplontsch">
+  <script src="/assets/js/family-theme.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/family-theme.css">
+  <link rel="stylesheet" href="/assets/css/family-typography.css">
+  <link rel="stylesheet" href="/assets/css/family-header.css">
+  <link rel="stylesheet" href="/assets/css/family-footer.css">
+  <link rel="stylesheet" href="/assets/css/family-actions.css">
+  <link rel="icon" type="image/png" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
 <body>
-	<nav class="topnav" aria-label="Primary">
-		<ul>
-			<li><a href="/" class="active">About</a></li>
-			<li><a href="https://notes.plontsch.de">Notes</a></li>
-			<li><a href="/clip">Experiments</a></li>
-		</ul>
-	</nav>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="nav-left">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="https://notes.plontsch.de/">Notes</a>
+          <a href="https://plontsch.de/" class="active" aria-current="page">About</a>
+        </nav>
+      </div>
+      <div class="nav-right">
+        <nav class="project-nav" aria-label="Project Websites">
+          <a class="project-link" href="https://berndpl.github.io/Louder/blog/" aria-label="Louder" title="Louder">
+            <img class="project-mark" src="/assets/project-icons/louder.png" alt="" width="256" height="256">
+          </a>
+          <a class="project-link" href="https://berndpl.github.io/Steps/blog/" aria-label="Steps" title="Steps">
+            <img class="project-mark" src="/assets/project-icons/steps.png" alt="" width="256" height="256">
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-	<div class="main">
-		<div>
-		<img class="header" src="img/branch.svg" alt="Branch" width="80" height="80"/>
-		</div>
-		<h1>Hi. <span class="name-tooltip">Bernd</span> here.</h1>
+  <main id="main-content" tabindex="-1" class="about-page">
+    <h2>Hi. Bernd here.</h2>
 
-<p>I am a hands on product designer with engineering background. I create helpful and friendly experiences with the individual in mind, sometimes millions of them.</p>
+    <p>I am a hands on product designer with engineering background. I create helpful and friendly experiences with the individual in mind, sometimes millions of them.</p>
 
-<p>Currently I work for Microsoft AI, focussing on device experiences and unique form factors. Every thought I share on this page is my own.</p>
+    <p>Currently I work for Microsoft AI, focussing on device experiences and unique form factors. Every thought I share on this page is my own.</p>
 
-<p>I also roast coffee using a popcorn popper and built the occasional app to experiment.</p>
+    <p>I also roast coffee using a popcorn popper and build the occasional experimental app for insight and delight.</p>
 
-<p>If you are around, let's meet.</p>
+    <p>If you are around, let&rsquo;s meet.</p>
 
-		<div class="footer">
-			<ul>
-				<li><a href="https://twitter.com/berndplontsch"><img src="img/twitter.svg" /></a></li>
-				<li><a href="https://medium.com/@berndplontsch"><img src="img/medium-dark.svg" /></a></li>
-				<li><a href="https://dribbble.com/berndplontsch"><img src="img/dribbble.svg" /></a></li>
-				<li><a href="https://github.com/berndpl"><img src="img/github.svg" /></a></li>
-				<li><a href="http://www.linkedin.com/in/bernd-plontsch-14538b13"><img src="img/linkedin.svg" /></a></li>
-			</ul>
-		</div>
-	</div>
+    <p class="about-cta"><a href="https://www.linkedin.com/in/bernd-plontsch-14538b13" class="lets-talk-button">Let's talk</a></p>
+  </main>
 
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const themeToggle = document.querySelector('img.header');
-			const root = document.documentElement;
-			
-			// Default to light theme (no data-theme attribute)
-			
-			themeToggle.addEventListener('click', function() {
-				const currentTheme = root.getAttribute('data-theme');
-				const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-				
-				if (newTheme === 'dark') {
-					root.setAttribute('data-theme', 'dark');
-				} else {
-					root.removeAttribute('data-theme');
-				}
-			});
-			
-			// Name pronunciation text-to-speech
-			const nameTooltip = document.querySelector('.name-tooltip');
-			if (nameTooltip && 'speechSynthesis' in window) {
-				nameTooltip.addEventListener('click', function() {
-					// Stop any ongoing speech
-					window.speechSynthesis.cancel();
-					
-					// Create speech utterance
-					const utterance = new SpeechSynthesisUtterance('Bernd');
-					
-					// Try to use German voice if available
-					const voices = window.speechSynthesis.getVoices();
-					const germanVoice = voices.find(voice => 
-						voice.lang.startsWith('de') || 
-						voice.name.toLowerCase().includes('german')
-					);
-					
-					if (germanVoice) {
-						utterance.voice = germanVoice;
-						utterance.lang = 'de-DE';
-					} else {
-						// Fallback to default voice with German pronunciation hints
-						utterance.lang = 'de-DE';
-					}
-					
-					utterance.rate = 0.3; // Very slow for clear pronunciation
-					utterance.pitch = 1.0;
-					
-					// Speak the name
-					window.speechSynthesis.speak(utterance);
-				});
-				
-				// Load voices when they become available
-				if (window.speechSynthesis.getVoices().length === 0) {
-					window.speechSynthesis.addEventListener('voiceschanged', function() {
-						// Voices are now loaded, but we don't need to do anything here
-						// as the voice selection happens on each click
-					});
-				}
-			}
-		});
-	</script>
+  <footer>
+    <div class="footer-row">
+      <p>&copy; 2026 Bernd Plontsch &bull; Notes, <a class="generated-footer-link" href="https://notes.plontsch.de/questions">questions</a>, <a class="generated-footer-link" href="https://notes.plontsch.de/insights">insights</a></p>
+      <div class="footer-controls">
+        <div class="accent-picker">
+          <button class="accent-toggle" type="button" aria-label="Choose color palette" aria-haspopup="menu" aria-expanded="false"></button>
+          <div class="accent-palette" role="menu" aria-label="Color palettes" hidden></div>
+        </div>
+        <button class="font-toggle" type="button" aria-label="Switch font">Aa</button>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme"></button>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/js/family-footer.js"></script>
 </body>
 </html>

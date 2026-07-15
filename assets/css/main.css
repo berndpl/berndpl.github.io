@@ -1,0 +1,1012 @@
+/* Reset and base styles */
+html {
+  text-align: left;
+  /* Always reserve vertical scrollbar space to prevent horizontal layout jumps
+     when page height changes between routes (e.g. with/without header image or canvas) */
+  overflow-y: scroll;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--theme-text);
+  background-color: var(--theme-base);
+  transition: background-color 0.35s ease, color 0.25s ease;
+}
+
+/* Header layout and type are synced from the family contract in family-header.css. */
+
+a {
+  color: var(--theme-link);
+  text-decoration: none;
+}
+
+.about-cta {
+  margin-top: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.6em;
+  padding: 0.1em 0.4em;
+  background-color: #313244; /* Catppuccin Mocha surface0 */
+  color: #cdd6f4; /* Catppuccin Mocha text */
+  border-radius: 3px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Main content styles */
+main {
+  margin-top: 2rem;
+  min-height: 70vh;
+  margin-bottom: 2rem;
+}
+
+/* Ensure consistent spacing - remove top margin from first element in main */
+main > *:first-child {
+  margin-top: 0;
+}
+
+
+/* Post graph visualization */
+.post-graph-container {
+  width: 100%;
+  margin-bottom: 2rem;
+  touch-action: pan-y;
+}
+
+#post-graph {
+  width: 100%;
+  height: 420px;
+  display: block;
+  background: transparent;
+  cursor: pointer;
+  touch-action: pan-y;
+}
+
+/* Post list styles */
+ul.posts {
+  list-style: none;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+.posts li {
+  margin-bottom: 0px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.posts li.year-separator {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  display: block;
+}
+
+.posts li.year-separator:first-child {
+  margin-top: 0;
+}
+
+.posts li.year-separator h3 {
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.posts {
+  h2 {
+      font-size: 1rem; /* Same size as body text */
+  }
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px dotted #6c7086; /* Catppuccin Mocha overlay0 */
+  margin: 2.5rem 0;
+  height: 0;
+  background: none;
+  opacity: 0.6;
+}
+
+h2 {
+  margin-top: 2.4rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 16px;
+}
+
+h4 {
+  /* color: #f4b8e4; */
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+
+
+li h2 {
+  display: inline;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.3;
+  flex: 1;
+  font-weight: 400;
+  font-size: 1rem; /* Same size as body text */
+}
+
+li h2 a {
+  font-weight: 400;
+}
+
+.posts li time {
+  display: inline;
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+  font-size: 0.9rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li a {
+  color: #b4befe; /* Catppuccin Mocha lavender */
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #f5e0dc; /* Catppuccin Mocha rosewater */
+  text-decoration: underline;
+}
+
+time {
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Individual post styles */
+article {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+article h1,
+main h1 {
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 400; /* Normal weight, not bold */
+  color: #bac2de; /* Base color for headings */
+  max-width: 80%; /* Match image width for consistent horizontal alignment */
+  display: block; /* Match image display property */
+  margin: 1rem 0; /* Match image margin for consistent spacing */
+}
+
+article h2,
+main h2 {
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 400; /* Normal weight, not bold */
+  margin-bottom: 1rem;
+  color: #bac2de; /* Base color for headings */
+}
+
+article h3,
+main h3 {
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 400; /* Normal weight, not bold */
+  color: #bac2de; /* Base color for headings */
+  margin-bottom: 1rem;
+
+}
+
+article h4,
+main h4 {
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 400; /* Normal weight, not bold */
+  color: #bac2de; /* Base color for headings */
+  margin-bottom: 1rem;
+}
+
+article h5,
+main h5 {
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 400; /* Normal weight, not bold */
+  color: #bac2de; /* Base color for headings */
+  margin-bottom: 1rem;
+}
+
+article time,
+main time {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+article p,
+main p {
+  color: rgba(166, 173, 200, 0.6); /* Body text color at 60% opacity */
+  font-size: 1rem; /* Same size as body text */
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+article p:last-child,
+main p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inline code styling for posts
+   Uses Catppuccin surface0 background with slightly brighter text
+   for subtle distinction from surrounding prose */
+article code,
+main code {
+  background-color: #313244; /* Catppuccin Mocha surface0 */
+  color: #cdd6f4; /* Catppuccin Mocha text - full opacity for emphasis */
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: 'Inconsolata', monospace;
+  font-size: 0.95em;
+}
+
+article ul,
+main ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  line-height: 0;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+article ul li::marker,
+main ul li::marker {
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+}
+
+article ol,
+main ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 1rem;
+}
+
+article ul li,
+article ol li,
+main ul li,
+main ol li {
+  color: rgba(166, 173, 200, 0.6); /* Body text color at 60% opacity */
+  font-size: 1rem; /* Same size as paragraph text */
+  line-height: 29px;
+  margin-bottom: 0;
+}
+
+article ul li:last-child,
+article ol li:last-child,
+main ul li:last-child,
+main ol li:last-child {
+  margin-bottom: 0;
+}
+
+/* Bold text in paragraphs and list items uses full opacity */
+article p strong,
+article p b,
+article ul li strong,
+article ul li b,
+article ol li strong,
+article ol li b,
+article p [style*="font-weight: bold"],
+article ul li [style*="font-weight: bold"],
+article ol li [style*="font-weight: bold"],
+main p strong,
+main p b,
+main ul li strong,
+main ul li b,
+main ol li strong,
+main ol li b,
+main p [style*="font-weight: bold"],
+main ul li [style*="font-weight: bold"],
+main ol li [style*="font-weight: bold"] {
+  color: rgba(166, 173, 200, 1); /* Full opacity for bold text */
+  font-weight: 400; /* Normal weight, not bold */
+}
+
+article img,
+main img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;  /* Consistent with paragraph spacing */
+    border-radius: 4px;
+  }
+
+article .post-teaser-video,
+main .post-teaser-video {
+  max-width: 80%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+  border-radius: 20px;
+}
+
+article .post-teaser,
+main .post-teaser {
+  max-width: 80%;
+  margin: 1rem 0;
+}
+
+article .post-teaser-video,
+main .post-teaser-video {
+  max-width: 100%;
+  margin: 0;
+}
+
+article .post-teaser-caption,
+main .post-teaser-caption {
+  margin-top: 0.6rem;
+  color: var(--theme-surface1);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+/* Interactive header canvas */
+.interactive-header {
+    max-width: 80%;
+    margin: 1rem 0;
+    line-height: 0;
+}
+
+.interactive-header canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    background-color: var(--theme-base);
+    border-radius: 4px;
+    aspect-ratio: 1200/638;
+}
+
+article a,
+main a {
+  color: #b4befe; /* Catppuccin Mocha lavender */
+  text-decoration: underline;
+}
+
+article a:hover,
+main a:hover {
+  color: #f5e0dc; /* Catppuccin Mocha rosewater */
+  text-decoration: underline;
+}
+
+/* Posts list links should not be underlined */
+.posts li a,
+.posts li h2 a {
+  text-decoration: none;
+}
+
+.posts li a:hover,
+.posts li h2 a:hover {
+  text-decoration: underline;
+}
+
+/* Post footer */
+article footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+article footer time {
+  margin-bottom: 0;
+}
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.share-buttons .post-link {
+  background: none;
+  border: none;
+  color: #b4befe; /* Catppuccin Mocha lavender */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.share-buttons .post-link:hover {
+  color: #f5e0dc; /* Catppuccin Mocha rosewater */
+  text-decoration: underline;
+}
+
+.platforms {
+  display: none;
+  gap: 0.5rem;
+}
+
+.platforms.visible {
+  display: flex;
+}
+
+.platforms a {
+  color: #b4befe; /* Catppuccin Mocha lavender */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.platforms a:hover {
+  color: #f5e0dc; /* Catppuccin Mocha rosewater */
+  text-decoration: underline;
+}
+
+/* Blockquote styles */
+article blockquote,
+main blockquote {
+  margin: 0 0 1rem 0; /* No top margin, keep bottom margin */
+  padding: 1rem 1rem 1rem 1.5rem; /* Added padding, extra left for border */
+  border-left: 1px solid #313244; /* Catppuccin Mocha overlay0 */
+  color: #a6adc8; /* Catppuccin Mocha subtext0 */
+  background: none; /* No background, using border instead */
+  border-radius: 0; /* No rounded corners */
+}
+
+article blockquote p,
+main blockquote p {
+  color: #6c7086; /* Catppuccin Mocha overlay0 - lighter than headlines */
+  margin-bottom: 1rem;
+}
+
+article blockquote p:last-child,
+main blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+article blockquote ol,
+article blockquote ul,
+main blockquote ol,
+main blockquote ul {
+  list-style-position: outside;
+  padding-left: 2em; /* Adjust as needed for your design */
+}
+
+article blockquote li,
+main blockquote li {
+  text-indent: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+article blockquote h3,
+main blockquote h3 {
+  color: #a6adc8; /* Catppuccin Mocha subtext0 */
+  margin-top: 0;
+}
+
+article blockquote h3 strong,
+main blockquote h3 strong {
+  font-weight: 400; /* Normal text weight */
+}
+
+article blockquote li:last-child,
+main blockquote li:last-child {
+  margin-bottom: 0;
+}
+
+article blockquote ul,
+main blockquote ul {
+  list-style-type: disc;
+  padding-left: 1.2em; /* Reduced indentation for bullets */
+}
+article blockquote ol,
+main blockquote ol {
+  list-style-type: decimal;
+}
+
+/* Blockquote styles for generated pages - subtle mauve color scheme */
+.generated-page blockquote {
+  margin-top: 3rem;
+  border-left-color: rgba(221, 182, 242, 0.3); /* Subtle mauve border */
+  background: none; /* No background */
+}
+
+.generated-page blockquote p {
+  color: rgba(221, 182, 242, 0.7); /* Mauve tint for generated text - same as generated page paragraphs */
+}
+
+/* Blockquote styles for LLM-Chat posts - using generated theme color */
+.llm-chat-post blockquote {
+  border-left-color: rgba(221, 182, 242, 0.5); /* More intense mauve border - generated theme */
+  background: none;
+  color: #ddb6f2; /* Base mauve color for all text - consistent tone */
+}
+
+.llm-chat-post blockquote p,
+.llm-chat-post blockquote li,
+.llm-chat-post blockquote em,
+.llm-chat-post blockquote i {
+  color: #ddb6f2; /* Base mauve color - consistent tone */
+}
+
+.llm-chat-post blockquote h3,
+.llm-chat-post blockquote h2,
+.llm-chat-post blockquote h4 {
+  color: #ddb6f2; /* Same mauve color as all text */
+}
+
+.llm-chat-post blockquote strong,
+.llm-chat-post blockquote b {
+  color: #ddb6f2; /* Same mauve color as all text */
+}
+
+.llm-chat-post blockquote table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ddb6f2; /* Generated mauve color for table text */
+}
+
+.llm-chat-post blockquote th,
+.llm-chat-post blockquote td {
+  text-align: left;
+  padding: 0.5em;
+  color: #ddb6f2; /* Generated mauve color for table cells */
+  border: none; /* Remove default borders if any */
+}
+
+.llm-chat-post .badge {
+  background-color: #3a3444; /* Warmer background - matching generated page */
+  color: #ddb6f2; /* Mauve text - generated theme */
+}
+
+/* Footer styles */
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  /*border-top: 1px solid #313244; */ /* Catppuccin Mocha surface0 */
+  font-size: 0.9rem;
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+}
+
+footer a {
+  color: var(--theme-link);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--theme-hover);
+  text-decoration: underline;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.share-buttons a {
+  color: #b4befe; /* Catppuccin Mocha lavender */
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.share-buttons a:hover {
+  color: #f5e0dc; /* Catppuccin Mocha rosewater */
+  text-decoration: underline;
+}
+
+h5 {
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #6c7086; /* Catppuccin Mocha overlay0 */
+}
+th, td {
+  text-align: left;
+  padding: 0.5em;
+}
+
+/* Card layout styles */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 720px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: #181825; /* Catppuccin Mocha mantle - slightly darker than base */
+  border: 1px solid #313244; /* Catppuccin Mocha surface0 */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 0;
+  transition: border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 150px; /* Bigger, consistent card height */
+  text-decoration: none;
+  cursor: pointer;
+  position: relative; /* For absolute positioning of emoji */
+}
+
+.card-emoji {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
+  filter: grayscale(100%) brightness(0.7);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.generated-page .card-emoji {
+  filter: grayscale(100%) brightness(0.8) sepia(100%) hue-rotate(260deg) saturate(200%);
+  opacity: 0.7;
+}
+
+/* Theme layer */
+body {
+  color: var(--theme-text);
+  background-color: var(--theme-base);
+}
+
+a,
+li a,
+article a,
+main a,
+.share-buttons a,
+.share-buttons .post-link,
+.platforms a,
+footer a {
+  color: var(--theme-link);
+}
+
+a:hover,
+li a:hover,
+article a:hover,
+main a:hover,
+.share-buttons a:hover,
+.share-buttons .post-link:hover,
+.platforms a:hover,
+footer a:hover,
+.site-nav a:hover {
+  color: var(--theme-hover);
+}
+
+footer a.generated-footer-link {
+  color: var(--theme-generated);
+  white-space: nowrap;
+}
+
+footer a.generated-footer-link::before {
+  content: "";
+  display: inline-block;
+  width: 0.38em;
+  height: 0.38em;
+  margin-right: 0.35em;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.75;
+  vertical-align: 0.08em;
+}
+
+footer a.generated-footer-link:hover {
+  color: var(--theme-generated-hover);
+}
+
+.site-nav a {
+  color: rgba(var(--theme-body-rgb), 0.6);
+}
+
+.site-nav a.active,
+.site-nav a[aria-current="page"],
+.badge,
+.card h3 {
+  color: var(--theme-text);
+}
+
+.site-nav a.inactive,
+.subtle,
+.posts li.year-separator h3,
+.posts li time,
+time,
+h5,
+footer,
+.card p em,
+article blockquote p,
+main blockquote p,
+table {
+  color: var(--theme-overlay0);
+}
+
+.badge,
+article code,
+main code {
+  background-color: var(--theme-surface0);
+  color: var(--theme-text);
+}
+
+hr {
+  border-top-color: var(--theme-overlay0);
+}
+
+article h1,
+main h1,
+article h2,
+main h2,
+article h3,
+main h3,
+article h4,
+main h4,
+article h5,
+main h5,
+.card p strong {
+  color: var(--theme-heading);
+}
+
+article p,
+main p,
+article ul li,
+article ol li,
+main ul li,
+main ol li,
+.card p {
+  color: rgba(var(--theme-body-rgb), var(--theme-body-alpha));
+}
+
+article p strong,
+article p b,
+article ul li strong,
+article ul li b,
+article ol li strong,
+article ol li b,
+main p strong,
+main p b,
+main ul li strong,
+main ul li b,
+main ol li strong,
+main ol li b {
+  color: rgba(var(--theme-body-rgb), 1);
+}
+
+article ul li::marker,
+main ul li::marker {
+  color: var(--theme-overlay0);
+}
+
+article blockquote,
+main blockquote {
+  border-left-color: var(--theme-surface0);
+  color: var(--theme-subtext0);
+}
+
+article blockquote h3,
+main blockquote h3 {
+  color: var(--theme-subtext0);
+}
+
+.card {
+  background-color: var(--theme-mantle);
+  border-color: var(--theme-surface0);
+}
+
+.card:hover {
+  border-color: var(--theme-surface1);
+}
+
+.card:hover h3 {
+  color: var(--theme-hover);
+}
+
+.generated-page h1,
+.generated-page .card h3,
+.llm-chat-post blockquote,
+.llm-chat-post blockquote p,
+.llm-chat-post blockquote li,
+.llm-chat-post blockquote em,
+.llm-chat-post blockquote i,
+.llm-chat-post blockquote h3,
+.llm-chat-post blockquote h2,
+.llm-chat-post blockquote h4,
+.llm-chat-post blockquote strong,
+.llm-chat-post blockquote b,
+.llm-chat-post blockquote table,
+.llm-chat-post blockquote th,
+.llm-chat-post blockquote td,
+.llm-chat-post .badge {
+  color: var(--theme-generated);
+}
+
+.generated-page .card,
+.llm-chat-post .badge {
+  background-color: var(--theme-generated-base);
+  border-color: var(--theme-generated-border);
+}
+
+.generated-page .card h3 {
+  color: var(--theme-generated);
+}
+
+.generated-page .card:hover h3 {
+  color: var(--theme-generated-hover);
+}
+
+.generated-page p {
+  color: rgba(var(--theme-generated-body-rgb), 0.7);
+}
+
+.generated-page blockquote {
+  border-left-color: color-mix(in srgb, var(--theme-generated) 30%, transparent);
+}
+
+.generated-page blockquote p {
+  color: rgba(var(--theme-generated-body-rgb), 0.7);
+}
+
+.questions-page .card-emoji {
+  background-color: var(--theme-generated);
+  color: var(--theme-button-text);
+}
+
+/* Question mark in circle for questions page */
+.questions-page .card-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--theme-generated);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--theme-button-text);
+  filter: none; /* Remove grayscale filter for questions page */
+  opacity: 1; /* Full opacity for filled circle */
+}
+
+/* Questions page card styling - top align text, arrow as content */
+.questions-page .card {
+  justify-content: space-between; /* Space between text and arrow */
+}
+
+.questions-page .card h3 {
+  padding-top: 0; /* Reset top padding */
+  padding-bottom: 0; /* No bottom padding */
+  margin-top: 0;
+  margin-bottom: 16px;
+  flex: 1; /* Take available space */
+}
+
+.questions-page .card-arrow {
+  align-self: flex-end; /* Align to bottom right */
+  margin-top: auto; /* Push to bottom */
+  margin-bottom: 0px;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  /* Match arrow color exactly to text color (#ddb6f2 = rgb(221, 182, 242)) */
+  filter: brightness(0) saturate(100%) invert(80%) sepia(38%) saturate(2000%) hue-rotate(260deg) brightness(108%) contrast(98%);
+  opacity: 1;
+}
+
+.questions-page .card:hover .card-arrow {
+  /* Match hover text color exactly (#f5c2e7 = rgb(245, 194, 231)) */
+  filter: brightness(0) saturate(100%) invert(88%) sepia(28%) saturate(2000%) hue-rotate(300deg) brightness(112%) contrast(98%);
+}
+
+.card:hover {
+  border-color: var(--theme-surface1);
+  text-decoration: none;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--theme-text);
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 3rem; /* Space for emoji at top */
+}
+
+.card:hover h3 {
+  color: var(--theme-hover);
+}
+
+.card p {
+  color: rgba(var(--theme-body-rgb), var(--theme-body-alpha));
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.card p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card p strong {
+  color: var(--theme-heading);
+  font-weight: 400;
+}
+
+.card p em {
+  color: var(--theme-overlay0);
+  font-style: italic;
+}
+
+/* Generated page styles - distinct color tone */
+.generated-page {
+  /* Subtle warm tone to distinguish generated content */
+}
+
+.generated-page h1 {
+  color: var(--theme-generated);
+}
+
+.generated-page .card {
+  background-color: var(--theme-generated-base);
+  border-color: var(--theme-generated-border);
+}
+
+.generated-page .card h3 {
+  color: var(--theme-generated);
+}
+
+.generated-page .card:hover h3 {
+  color: var(--theme-generated-hover);
+}
+
+.generated-page p {
+  color: rgba(var(--theme-generated-body-rgb), 0.7);
+}
+
+.generated-page .badge {
+  background-color: var(--theme-generated-border);
+  color: var(--theme-generated);
+}
+
+.generated-page .card-emoji {
+  filter: grayscale(100%) brightness(0.8) sepia(100%) hue-rotate(260deg) saturate(200%);
+  opacity: 0.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+}

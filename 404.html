@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found · Bernd Plontsch</title>
+  <meta name="description" content="The requested page could not be found.">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg-primary: #e6e6e6;
+      --text-primary: #444444;
+      --text-secondary: #7c7c7c;
+      --link: #3333cc;
+      --font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-primary: #1e1e2e;
+      --text-primary: #cdd6f4;
+      --text-secondary: #7d8297;
+      --link: #89b4fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0 24px 32px;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      font-family: var(--font-family);
+      font-size: 14px;
+      line-height: 1.6;
+      transition: background-color .8s ease, color .8s ease;
+    }
+    .topnav {
+      max-width: 480px;
+      margin: 0 auto;
+      padding-top: 18px;
+    }
+    .topnav ul {
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topnav a { color: var(--text-primary); }
+    main {
+      min-height: 78vh;
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .theme-mark {
+      margin: 0 0 1.5rem;
+      padding: 0;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+    .theme-mark img { display: block; width: 80px; height: 80px; }
+    .code { margin: 0 0 .4rem; color: var(--text-secondary); }
+    h1 { margin: 0; font-size: 1rem; }
+    p { max-width: 32rem; color: var(--text-secondary); }
+    .home-link { margin-top: .5rem; }
+    :focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="Primary">
+    <ul>
+      <li><a href="/">About</a></li>
+      <li><a href="https://notes.plontsch.de/">Notes</a></li>
+      <li><a href="/clip/">Experiments</a></li>
+    </ul>
+  </nav>
+  <main>
+    <button class="theme-mark" type="button" aria-label="Toggle color theme">
+      <img src="/img/branch.svg" alt="">
+    </button>
+    <p class="code">404</p>
+    <h1>Nothing here.</h1>
+    <p>The page you followed does not exist, or it moved somewhere else.</p>
+    <p class="home-link"><a href="/">Back home</a></p>
+  </main>
+  <script>
+    document.querySelector(".theme-mark").addEventListener("click", function () {
+      const root = document.documentElement;
+      if (root.getAttribute("data-theme") === "dark") root.removeAttribute("data-theme");
+      else root.setAttribute("data-theme", "dark");
+    });
+  </script>
+</body>
+</html>
